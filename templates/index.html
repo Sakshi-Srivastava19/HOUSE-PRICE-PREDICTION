@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🏚️ House Price Prediction</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: url("/static/HOUSE.jpeg") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.85);
+            width: 400px;
+            margin: 80px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+
+        input[type="number"] {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #aaa;
+            border-radius: 8px;
+            font-size: 16px;
+            box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+
+        input[type="submit"] {
+            width: 95%;
+            padding: 12px;
+            background-color: #28a745;
+            border: none;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        .result {
+            font-size: 22px;
+            font-weight: bold;
+            color: #007bff;
+            margin-top: 20px;
+            background: rgba(255,255,255,0.6);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 15px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: rgb(12, 174, 238); 
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🏠 House Price Prediction</h1>
+
+        <form action="/predict" method="POST">
+            <input type="number" name="MedInc" placeholder=" 💵 Median Income" step="any" required>
+            <input type="number" name="HouseAge" placeholder=" 🏚️ House Age" step="any" required>
+            <input type="number" name="AveRooms" placeholder=" 🚪 Average Rooms" step="any" required>
+            <input type="number" name="AveBedrms" placeholder=" 🛏️ Average Bedrooms" step="any" required>
+            <input type="number" name="Population" placeholder=" 👨‍👩‍👧‍👦 Population" step="any" required>
+            <input type="number" name="AveOccup" placeholder=" 👥 Average Occupancy" step="any" required>
+            <input type="number" name="Latitude" placeholder=" 🧭Latitude" step="any" required>
+            <input type="number" name="Longitude" placeholder=" 🗺️Longitude" step="any" required>
+
+            <input type="submit" value="🔮 Predict">
+        </form>
+
+        {% if prediction_text %}
+            <div class="result">{{ prediction_text }}</div>
+        {% endif %}
+    </div>
+
+    <footer>Made with ❤️ by SAKSHI SRIVASTAVA</footer>
+
+</body>
+</html>
+
