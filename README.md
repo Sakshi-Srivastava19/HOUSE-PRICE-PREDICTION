@@ -1,6 +1,59 @@
 # HOUSE-PRICE-PREDICTION
 PREDICTING PRICE OF HOUSE
+# 🏡 House Price Prediction using Machine Learning
 
+![House Price Prediction](https://img.shields.io/badge/Project-House%20Price%20Prediction-brightgreen)
+![Python](https://img.shields.io/badge/Python-3.8+-blue)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+## 📌 Overview
+This project focuses on building a **House Price Prediction Model** using supervised Machine Learning techniques. The model predicts property prices based on various features such as area, number of rooms, year built, and more. It demonstrates the complete ML workflow including **EDA, data preprocessing, feature engineering, model training, evaluation, and deployment using Streamlit**.
+
+---
+
+## 🛠️ Tech Stack
+- Python
+- Pandas, NumPy
+- Matplotlib, Seaborn (EDA & Visualization)
+- Scikit-learn (ML Models)
+- XGBoost (Advanced Regression)
+- Streamlit (App Deployment)
+- Jupyter Notebook / Google Colab
+
+---
+
+## 🗂️ Dataset
+- **Source**: [Kaggle House Prices Dataset](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data)
+- **Target Variable**: `SalePrice`
+- **Features**: Lot Area, Year Built, Overall Quality, Rooms, Garage, Neighborhood, etc.
+
+---
+
+## 📊 Project Workflow
+1. Data Collection & Understanding
+2. Exploratory Data Analysis (EDA)
+3. Data Cleaning & Preprocessing
+4. Feature Engineering
+5. Model Building (Linear Regression, Random Forest, XGBoost)
+6. Model Evaluation (MAE, RMSE, R² Score)
+7. Deployment with Streamlit (Optional)
+
+---
+
+## 📁 Project Structure
+house-price-prediction/
+├── data/
+│ └── house_prices.csv
+├── notebooks/
+│ └── House_Price_Prediction.ipynb
+├── src/
+│ ├── preprocessing.py
+│ ├── model_training.py
+│ └── evaluation.py
+├── app/
+│ └── streamlit_app.py
+├── requirements.txt
+└── README.md
 ---
 
 ## 🚀 How to Run Locally
